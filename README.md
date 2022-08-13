@@ -1,44 +1,45 @@
-# Prosper-Loan-Data
-# Project Motivation
-- This is an Udacity Nanodegree project.I was interested in using Prosper Loan Data to better understand :
+# Diamonds Data Exploration
 
-## Univariate Exploration:
-- Loan status
-- Employment Status
-- Borrower Rate
-## Bivariate Exploration:
-- ProsperRating (Alpha) and Term
-- ProsperRating (Alpha) and Employment Status
+## Dataset
+
+The data consists of information regarding 54,000 round-cut diamonds, including
+price, carat, and other diamond qualities. The dataset can be found in the
+repository for R's ggplot2 library [here](https://github.com/tidyverse/ggplot2/blob/master/data-raw/diamonds.csv),
+with feature documentation available [here](http://ggplot2.tidyverse.org/reference/diamonds.html).
 
 
-## Multivariate Exploration:
-- EmploymentStatus , Loan Status and ProsperRating (numeric)
-- ProsperRating (numeric), Loan Original Amount and LoanStatus
+## Summary of Findings
 
-# Project Overview
-* This project has two parts that demonstrate the importance and value of data visualization techniques in the data analysis process. In the first part, you will use Python visualization libraries to systematically explore a selected dataset, starting from plots of single variables and building up to plots of multiple variables. In the second part, you will produce a short presentation that illustrates interesting properties, trends, and relationships that you discovered in your selected dataset. The primary method of conveying your findings will be through transforming your exploratory visualizations from the first part into polished, explanatory visualizations.
+In the exploration, I found that there was a strong relationship between the
+price of a diamond and its carat weight, with modifying effects from the cut,
+color, and clarity grades given to the diamond. The relationship is
+approximately linear between price and carat when price is transformed to be on
+a logarithmic scale and carat transformed to be on a cube-root scale. I found a
+somewhat surprising result initially when the marginal trend for the cut, color,
+and clarity variables indicated that higher diamond quality was associated with
+lower price. However, higher diamond quality was also associated with smaller
+diamonds. When I isolated diamonds of a single carat weight, there was a clear
+positive relationship between higher diamond quality and higher diamond price.
 
-# Project Details
-* This project is broken into two halves. In the first section, you will do exploratory data analysis on a dataset of your choice. To investigate the dataset's variables and comprehend the data's structure, anomalies, patterns, and relationships, you will utilize Python data science and data visualization modules. This section's analysis should be systematic, progressing from basic univariate relationships to multivariate relationships, although it does not have to be clean or faultless. There is no one solution that must emerge from a particular dataset. This section of the project allows you to ask questions about the data and create your own findings. Project Details comes to an end, and it may take several steps to get to what you're really searching for.
-
-
-#### Step 1.1: Choose your Dataset: [data](https://www.google.com/url?q=https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&sa=D&ust=1554486256021000)
-#### Step 1.2: Explore Your Data
-- It's time to get to the good stuff. Investigate your data and record your results in a report. The report should begin by briefly introducing the dataset and then on to walk through the points of exploration that you did. Headers and text should be used to arrange your thoughts and discoveries. Visualizations in this section of the project do not need to be perfect: this is merely your personal experimentation at this time. However, you must still follow the concepts of utilizing proper plot types and encodings so that reliable conclusions can be formed, and you must include enough comments and labeling so that when you return to your work, you can easily comprehend your analytic methods.
-
-#### step 2.1: Write down your story
-- You've undoubtedly discovered a lot of items at the conclusion of your exploration. It is now time to compile your results and choose a tale to tell others. You should describe your primary discoveries and remark on the steps you followed in your data investigation in your readme document. You should also outline the important insights you want to express in your explanatory report, as well as any updates to visualizations or new visualizations that will be generated to connect your insights.
-
-#### Step 2.2: Make a Slide Deck
-Following the goals you outlined in the previous phase, develop a slide presentation using explanatory data visualizations to convey a story about the data you investigated. You can start with the code you used in your investigation, but make sure it is altered so that your plots are refined. In your modifications, be sure to keep features of design integrity in mind.
-
-#### Step 2.3: Review and Submit the Project
-
-## Result :
-* Business and home improvement don't have nearly equivalent means at all, with the exception of auto.
-* Business-related categories typically have more
-![image](https://user-images.githubusercontent.com/67028272/184343871-449a817d-085a-4ef1-a3cf-f8e774b0fac9.png)
+Outside of the main variables of interest, I verified the relationship between
+diamond carat weight and its x, y, and z dimensions. For the dataset given,
+there was an interesting interaction in the categorical diamond quality
+features. The lower clarity grades looked like they had slightly better
+distribution of cut and color grades than diamonds with the higher clarity
+grades.
 
 
+## Key Insights for Presentation
 
+For the presentation, I focus on just the influence of the four Cs of diamonds
+and leave out most of the intermediate derivations. I start by introducing the
+price variable, followed by the pattern in carat distribution, then plot the
+transformed scatterplot.
 
+Afterwards, I introduce each of the categorical variables one by one. To start,
+I use the violin plots of price and carat across clarity. I'm only looking at
+the clarity grade plot here since it's the clearest example of how the
+categorical quality grades affect diamond pricing. The other two categorical
+variables, cut and color, are covered afterwards, using point plots. I've made
+sure to use different color palettes for each quality variable to make sure it
+is clear that they're different between plots.
