@@ -23,10 +23,7 @@ Following the goals you outlined in the previous phase, develop a slide presenta
 
 #### Step 2.3: Review and Submit the Project
 
-## Result :
-* Business and home improvement don't have nearly equivalent means at all, with the exception of auto.
-* Business-related categories typically have more
-![image](https://user-images.githubusercontent.com/67028272/184343871-449a817d-085a-4ef1-a3cf-f8e774b0fac9.png)
+
 
 
 
